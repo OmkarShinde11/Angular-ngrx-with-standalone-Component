@@ -6,6 +6,8 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class CounterEffect{
+
+    //this effect where other actions are dispatch and handle (listen) in reducer
     loadCounter=createEffect(()=>this.actions$.pipe(
         ofType(initCouner),
         switchMap(()=>{
